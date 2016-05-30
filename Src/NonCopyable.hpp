@@ -7,12 +7,10 @@
 class NonCopyable
 {
 protected:
-    NonCopyable() = default;
+    NonCopyable() noexcept = default;
+    ~NonCopyable() = default;
 
 private:
-    NonCopyable(NonCopyable&&) = delete;
     NonCopyable(NonCopyable const&) = delete;
-
-    NonCopyable& operator=(NonCopyable&&) = delete;
     NonCopyable& operator=(NonCopyable const&) = delete;
 };
