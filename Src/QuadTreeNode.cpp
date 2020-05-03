@@ -133,7 +133,7 @@ size_t QuadTreeNode::getIndex(sf::FloatRect objBounds) const
         }
     }
 
-    return std::move(index);
+    return index;
 }
 
 std::vector<std::weak_ptr<Entity>> QuadTreeNode::getCollisionable(sf::FloatRect const& bounds) const
